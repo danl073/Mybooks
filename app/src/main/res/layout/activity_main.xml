@@ -25,7 +25,8 @@
         android:layout_margin="16dp"
         app:srcCompat="@android:drawable/ic_input_add"
         android:tint="#fff"
-        android:layout_gravity="bottom|end"/>
+        android:layout_gravity="bottom|end"
+        android:onClick="abrirCadastro"/>
 
 
 </android.support.design.widget.CoordinatorLayout>
