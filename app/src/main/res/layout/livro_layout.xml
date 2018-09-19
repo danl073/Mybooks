@@ -24,7 +24,8 @@
                 android:src="@drawable/pequeno_principe"
                 />
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingTop="5dp">
@@ -44,6 +45,12 @@
                     android:text="@string/pequeno_pricipe"
                     />
             </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_delete_black_18dp"
+                android:id="@+id/imgDeleteLivro"/>
 
         </LinearLayout>
 
