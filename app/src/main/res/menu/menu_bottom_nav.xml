@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Frag 1"
+    <item android:title="Livros"
         android:id="@+id/menu_frag1"
-        android:icon="@android:drawable/ic_dialog_map"/>
+        android:icon="@drawable/home"/>
 
 
 
-    <item android:title="Frag2"
+    <item android:title="Ler"
         android:id="@+id/menu_frag2"
-        android:icon="@android:drawable/ic_delete"/>
+        android:icon="@drawable/baseline_library_books_black_18dp"/>
 
-    <item android:title="Frag3"
+    <item android:title="Lidos"
         android:id="@+id/menu_frag3"
-        android:icon="@android:drawable/alert_dark_frame"/>
+        android:icon="@drawable/lidos"/>
 
 </menu>

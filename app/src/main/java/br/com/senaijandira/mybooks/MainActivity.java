@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        fm = getSupportFragmentManager();
+
         //Criando a instancia do Banco de Dados
         myBooksDatabase = Room.databaseBuilder(getApplicationContext(),
                 MyBooksDatabase.class, Utils.DATABASE_NAME)
@@ -73,11 +76,16 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 if (item.getItemId() == R.id.menu_frag1){
-                    openFragment1(null);
+                    openContextMenu(null);
                     return true;
                 }
 
                 if (item.getItemId() == R.id.menu_frag2){
+                    openFragment1(null);
+                    return true;
+                }
+
+                if (item.getItemId() == R.id.menu_frag3){
                     openFragment2(null);
                     return true;
                 }
@@ -90,12 +98,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public void openFragment1(View view) {
 
         FragmentTransaction ft = fm.beginTransaction();
 
-        ft.replace(R.id.menu_frag1, new Livros_para_ler());
+        ft.replace(R.id.frame_layout, new Livros_para_ler());
 
 
         ft.commit();
@@ -107,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentTransaction ft = fm.beginTransaction();
 
-        ft.replace(R.id.menu_frag2, new Livros_lidos());
+        ft.replace(R.id.frame_layout, new Livros_lidos());
 
 
         ft.commit();
