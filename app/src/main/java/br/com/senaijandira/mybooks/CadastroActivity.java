@@ -24,6 +24,7 @@ public class CadastroActivity extends AppCompatActivity {
     Bitmap LivroCapa;
     ImageView imgLivroCapa;
     EditText txtTitulo, txtDescricao;
+    AlertDialog alerta;
 
     private final int COD_REQ_GALERIA = 101;
 
@@ -87,7 +88,7 @@ public class CadastroActivity extends AppCompatActivity {
 
             String descricao = txtDescricao.getText().toString();
 
-            Livro livro = new Livro(0, capa, titulo, descricao);
+            Livro livro = new Livro(0, capa, titulo, descricao, 0);
 
             //Inserir na variavel estatica da MainActivity
 //            int tamanhoArray = MainActivity.livros.length;
@@ -99,6 +100,9 @@ public class CadastroActivity extends AppCompatActivity {
 
             //Inserir no banco de dados
             myBooksDatabase.livroDao().inserir(livro);
+
+
+            alert("Sucesso","Livro Salvo com Sucesso", 1);
 
 
         }
@@ -120,5 +124,8 @@ public class CadastroActivity extends AppCompatActivity {
                     }
                 });
             }
+
+            alerta = builder.create();
+            alerta.show();
         }
 }

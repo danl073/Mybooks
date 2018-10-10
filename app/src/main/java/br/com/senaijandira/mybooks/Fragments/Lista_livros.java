@@ -42,6 +42,9 @@ public class Lista_livros extends Fragment {
 
         listViewLivros.setAdapter(adapter);
 
+        //fazer select no banco
+
+
         return v;
     }
 

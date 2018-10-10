@@ -7,38 +7,43 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MyBooks"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/cardview_light_background"/>
+
+    </android.support.v7.widget.Toolbar>
+
 
     <android.support.design.widget.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/menu_bottom_nav"
-        app:itemBackground="@color/cardview_light_background"
-        app:itemIconTint="@color/colorPrimaryDark"
-        app:itemTextColor="@color/cardview_dark_background"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@color/cardview_light_background"
+        app:itemTextColor="@color/cardview_light_background"
         app:menu="@menu/menu_bottom_nav">
 
     </android.support.design.widget.BottomNavigationView>
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/ListaLivros"
-        android:layout_marginTop="5dp">
-    </LinearLayout>
-
-    </ScrollView>
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/frame_layout">
+        android:id="@+id/frame_layout"
+        >
 
     </FrameLayout>
 
@@ -48,6 +53,7 @@
         android:layout_margin="16dp"
         app:srcCompat="@android:drawable/ic_input_add"
         android:tint="#fff"
+        android:backgroundTint="@color/colorPrimary"
         android:layout_gravity="bottom|end"
         android:onClick="abrirCadastro"
         />

@@ -23,6 +23,15 @@ public interface LivroDao {
     @Query("SELECT * FROM livro")
     Livro[] selecionarTodos();
 
+    @Query("Select * From livro Where id =:idLivro")
+    Livro pegarLivro (int idLivro);
+
+    @Query("SELECT * FROM livro WHERE status = 1")
+    Livro[] selecionarLivrosLer();
+
+    @Query("SELECT * FROM livro WHERE status = 2")
+    Livro[] selecionarLivrosLidos();
+
 
 
 }

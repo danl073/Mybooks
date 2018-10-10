@@ -6,7 +6,7 @@ import android.arch.persistence.room.RoomDatabase;
 import br.com.senaijandira.mybooks.dao.LivroDao;
 import br.com.senaijandira.mybooks.model.Livro;
 
-@Database(entities = {Livro.class} , version = 1)
+@Database(entities = {Livro.class} , version = 2)
 public abstract class MyBooksDatabase extends RoomDatabase {
 
     public abstract LivroDao livroDao();

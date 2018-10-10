@@ -3,7 +3,8 @@
 
     <item android:title="Livros"
         android:id="@+id/menu_frag1"
-        android:icon="@drawable/home"/>
+        android:icon="@drawable/home"
+        />
 
 
 

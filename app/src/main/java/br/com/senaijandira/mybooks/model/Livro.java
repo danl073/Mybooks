@@ -17,9 +17,14 @@ public class Livro {
     private String titulo;
     private String descricao;
 
+
+
+    private int status;
+
     public Livro(){}
 
-    public Livro(int id, byte[] capa, String titulo, String descricao){
+    public Livro(int id, byte[] capa, String titulo, String descricao, int status){
+        this.status = status;
         this.id = id;
         this.capa = capa;
         this.titulo = titulo;
@@ -57,5 +62,13 @@ public class Livro {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }
